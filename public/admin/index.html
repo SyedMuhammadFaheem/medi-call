@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>medi-call admin</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+  th, td { text-align: left; padding: 0.4rem; border-bottom: 1px solid #ddd; }
+  form { display: grid; gap: 0.5rem; max-width: 420px; margin-bottom: 2rem; }
+  label { font-size: 0.85rem; color: #333; }
+  input, select { padding: 0.4rem; font-size: 1rem; }
+  button { padding: 0.5rem; cursor: pointer; }
+  .danger { color: #b00020; }
+  h2 { margin-top: 2rem; }
+</style>
+</head>
+<body>
+<h1>medi-call: medication schedule</h1>
+<p>This is a reminder/narration tool, not medical advice. Enter dosage and instructions exactly as prescribed.</p>
+
+<table id="medTable">
+  <thead><tr><th>Name</th><th>Dosage</th><th>Qty</th><th>Instructions</th><th>Slot</th><th>Active</th><th></th></tr></thead>
+  <tbody></tbody>
+</table>
+
+<h2>Add / edit medicine</h2>
+<form id="medForm">
+  <input type="hidden" id="medId" />
+  <label>Name<input id="name" required /></label>
+  <label>Dosage (e.g. "1 tablet, 500mg")<input id="dosage" required /></label>
+  <label>Quantity (e.g. "1 goli")<input id="quantity" /></label>
+  <label>Instructions (e.g. "khane ke baad")<input id="instructions" /></label>
+  <label>Reminder slot
+    <select id="slot">
+      <option value="morning">Morning</option>
+      <option value="evening">Evening</option>
+      <option value="both">Both</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="active" checked /> Active</label>
+  <button type="submit">Save</button>
+</form>
+
+<h2>Recent call log</h2>
+<table id="logTable">
+  <thead><tr><th>Time</th><th>Slot</th><th>Status</th><th>Detail</th></tr></thead>
+  <tbody></tbody>
+</table>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+data/*.db
+data/*.db-*
+*.log
+.DS_Store
+coverage/
+
+# Local assistant/tooling state
+.claude/
+.remember/
+CLAUDE.md
