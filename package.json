@@ -37,7 +37,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.2",
     "node-cron": "^4.6.0",
-    "twilio": "^5.4.3"
+    "twilio": "^6.1.1"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^9.6.0",
